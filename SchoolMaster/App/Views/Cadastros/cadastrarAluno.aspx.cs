@@ -29,7 +29,9 @@ namespace SchoolMaster.App
             string nome = aluno_nome.Text;
             float mgp = float.Parse(aluno_mgp.Text);
             DateTime data = Convert.ToDateTime(aluno_datanascimento.Text);
-            aluControl.cadastrar(nome,cpf,mgp,data);
+
+            int curso = Convert.ToInt32(listaCursos.Text);
+            aluControl.cadastrar(nome,cpf,mgp,data,curso);
         }
     }
-}
+}   
