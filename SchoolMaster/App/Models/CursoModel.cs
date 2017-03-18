@@ -31,11 +31,11 @@ namespace SchoolMaster.App.Models
                     objCurso._valorCurso = Convert.ToDouble(this.reader["ValorCurso"]);
                     objCurso._cursoID = Convert.ToInt32(this.reader["CursoID"]);
                     listacurso.Add(objCurso);
-                }   
+                }
             }
             catch (SqlException ex)
             {
-                Console.WriteLine("Erro de sql"+ ex);
+                Console.WriteLine("Erro de sql" + ex);
             }
             finally
             {
@@ -44,6 +44,36 @@ namespace SchoolMaster.App.Models
 
 
             return listacurso;
+        }
+
+        public Boolean cadastrar(CursoClass curso)
+        {
+            try
+            {
+                this.OpenConcection();
+                this.commad =
+                    new SqlCommand(
+                        "INSERT INTO [CURSO](Codigo,Descricao,ValorCurso) VALUES (@CODIGO,@DESCRICAO,@VALOR)",
+                        this.connect);
+                this.commad.Parameters.AddWithValue("@CODIGO", curso._codigo);
+                this.commad.Parameters.AddWithValue("@DESCRICAO", curso._descricao);
+                this.commad.Parameters.AddWithValue("@VALOR", curso._valorCurso);
+
+                if (this.commad.ExecuteNonQuery() > 0)
+                {
+                    return true;
+                }
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception("Erro de sql"+ex);
+            }
+            finally
+            {
+                this.CloseConection();
+            }
+            return false;
         }
     }
 }

@@ -107,9 +107,18 @@ input[type=date] {
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
-}
-
-</style>
+}.formatButton {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 26px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}</style>
 </head>
 <body>
   <div>
@@ -120,6 +129,40 @@ input[type=date] {
             <a href="javascript:void(0)" class="dropbtn">Aluno</a>
         <div class="dropdown-content">
               <a href="/App/Views/Cadastros/cadastrarAluno.aspx">Aréa de Cadastro</a>
+              <a href="/App/Views/Consultar/consultarAlunos.aspx">Relatorio Geral</a>
+        </div>
+        </li>
+        <li class="dropdown">
+            <a href="javascript:void(0)" class="dropbtn">Curso</a>
+        <div class="dropdown-content">
+              <a href="/App/Views/Cadastros/cadastrarCurso.aspx">Aréa de Cadastro</a>
+              <a href="/App/Views/Consultar/consultarAlunos.aspx">Relatorio Geral</a>
+        </div>
+        </li>
+        <li class="dropdown">
+            <a href="javascript:void(0)" class="dropbtn">Disciplina</a>
+        <div class="dropdown-content">
+              <a href="/App/Views/Cadastros/cadastrarDisciplina.aspx">Aréa de Cadastro</a>
+              <a href="/App/Views/Consultar/consultarAlunos.aspx">Relatorio Geral</a>
+        </div>
+        </li>
+        <li class="dropdown">
+            <a href="javascript:void(0)" class="dropbtn">Turma</a>
+        <div class="dropdown-content">
+              <a href="/App/Views/Cadastros/cadastrarTurma.aspx">Aréa de Cadastro</a>
+              <a href="/App/Views/Consultar/consultarAlunos.aspx">Relatorio Geral</a>
+        </div>
+        </li>
+        <li class="dropdown">
+            <a href="javascript:void(0)" class="dropbtn">Professor</a>
+        <div class="dropdown-content">
+              <a href="/App/Views/Cadastros/cadastrarProfessor.aspx">Aréa de Cadastro</a>
+              <a href="/App/Views/Consultar/consultarAlunos.aspx">Relatorio Geral</a>
+        </div>
+        </li>
+        <li class="dropdown">
+            <a href="javascript:void(0)" class="dropbtn">Historico</a>
+        <div class="dropdown-content">
               <a href="/App/Views/Consultar/consultarAlunos.aspx">Relatorio Geral</a>
         </div>
         </li>
@@ -137,6 +180,5 @@ input[type=date] {
             </asp:ContentPlaceHolder>
     </form>
     </div>
-
 </body>
 </html>
