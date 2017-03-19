@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/App/Layout.Master" AutoEventWireup="true" CodeBehind="consultarAlunos.aspx.cs" Inherits="SchoolMaster.App.WebForm3" %>
+﻿<%@ Page Title="Consultar Alunos" Language="C#" MasterPageFile="~/App/Layout.Master" AutoEventWireup="true" CodeBehind="consultarAlunos.aspx.cs" Inherits="SchoolMaster.App.WebForm3" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="mainForm" runat="server">
@@ -11,7 +11,7 @@
 </asp:Table>
 </asp:Content>
 <asp:Content  ContentPlaceHolderID="bodyForm" runat="server">
-    <asp:GridView ID="ListaDeAlunos" runat="server" DataSourceID="ObjectAluno" AutoGenerateColumns="False" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" ForeColor="Black" HorizontalAlign="Center">
+    <asp:GridView ID="ListaDeAlunos" runat="server" DataSourceID="ObjectAluno" AutoGenerateColumns="False" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" ForeColor="Black" HorizontalAlign="Center" AllowPaging="True">
         <Columns>
             <asp:BoundField DataField="_nome" HeaderText="Nome do Aluno" SortExpression="_nome" />
             <asp:BoundField DataField="_cpf" HeaderText="CPF" SortExpression="_cpf"></asp:BoundField>

@@ -56,6 +56,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.SqlXml" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
@@ -85,16 +86,17 @@
     <Content Include="App\Views\Cadastros\cadastrarDisciplina.aspx" />
     <Content Include="App\Views\Cadastros\cadastrarTurma.aspx" />
     <Content Include="App\Views\Cadastros\cadastrarProfessor.aspx" />
+    <Content Include="App\Views\Consultar\consultarCurso.aspx" />
     <Content Include="packages.config" />
     <Content Include="App\public\Scripts\jquery-1.9.1.min.map" />
     <Content Include="App\Layout.Master" />
-    <None Include="Scripts\jquery-3.1.1.intellisense.js" />
-    <Content Include="Scripts\jquery-3.1.1.js" />
-    <Content Include="Scripts\jquery-3.1.1.min.js" />
-    <Content Include="Scripts\jquery-3.1.1.slim.js" />
-    <Content Include="Scripts\jquery-3.1.1.slim.min.js" />
-    <Content Include="Scripts\jquery-3.1.1.slim.min.map" />
-    <Content Include="Scripts\jquery-3.1.1.min.map" />
+    <None Include="App\public\Scripts\jquery-3.1.1.intellisense.js" />
+    <Content Include="App\public\Scripts\jquery-3.1.1.js" />
+    <Content Include="App\public\Scripts\jquery-3.1.1.min.js" />
+    <Content Include="App\public\Scripts\jquery-3.1.1.slim.js" />
+    <Content Include="App\public\Scripts\jquery-3.1.1.slim.min.js" />
+    <Content Include="App\public\Scripts\jquery-3.1.1.slim.min.map" />
+    <Content Include="App\public\Scripts\jquery-3.1.1.min.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -186,6 +188,13 @@
     </Compile>
     <Compile Include="App\Views\Cadastros\cadastrarProfessor.aspx.designer.cs">
       <DependentUpon>cadastrarProfessor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App\Views\Consultar\consultarCurso.aspx.cs">
+      <DependentUpon>consultarCurso.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App\Views\Consultar\consultarCurso.aspx.designer.cs">
+      <DependentUpon>consultarCurso.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

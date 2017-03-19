@@ -7,8 +7,8 @@
     <title></title>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
-    <script src="public/Scripts/bootstrap.js" type="text/javascript"></script>
-    <script type="text/javascript" src="public/Scripts/jquery-1.9.1.js"></script>
+    <script src="/App/public/Scripts/bootstrap.js" type="text/javascript"></script>
+    <script type="text/javascript" src="/App/public/Scripts/jquery-1.9.1.js"></script>
     <style>
 ul {
     list-style-type: none;
@@ -118,7 +118,27 @@ input[type=date] {
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
-}</style>
+}input[type=submit].buttonPaginacao {
+    border-radius: 12px;
+    background-color: #4caf50;
+    color: #f1f1f1;
+    text-align:center;
+    text-decoration: none;
+    width: 70px;
+    height: 35px;
+}table {
+    border-collapse: collapse;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}</style>
 </head>
 <body>
   <div>
@@ -136,7 +156,7 @@ input[type=date] {
             <a href="javascript:void(0)" class="dropbtn">Curso</a>
         <div class="dropdown-content">
               <a href="/App/Views/Cadastros/cadastrarCurso.aspx">Aréa de Cadastro</a>
-              <a href="/App/Views/Consultar/consultarAlunos.aspx">Relatorio Geral</a>
+              <a href="/App/Views/Consultar/consultarCurso.aspx">Relatorio Geral</a>
         </div>
         </li>
         <li class="dropdown">

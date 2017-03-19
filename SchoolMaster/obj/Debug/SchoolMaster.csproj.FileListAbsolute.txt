@@ -15,7 +15,6 @@ C:\c#\SchoolMaster\SchoolMaster\bin\SchoolMaster.dll
 C:\c#\SchoolMaster\SchoolMaster\bin\SchoolMaster.pdb
 C:\c#\SchoolMaster\SchoolMaster\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\c#\SchoolMaster\SchoolMaster\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\c#\SchoolMaster\SchoolMaster\obj\Debug\SchoolMaster.csprojResolveAssemblyReference.cache
 C:\c#\SchoolMaster\SchoolMaster\obj\Debug\SchoolMaster.dll
 C:\c#\SchoolMaster\SchoolMaster\obj\Debug\SchoolMaster.pdb
 C:\c#\SchoolMaster\SchoolMaster\bin\EntityFramework.dll
@@ -58,3 +57,4 @@ C:\c#\SchoolMaster\SchoolMaster\bin\roslyn\System.Xml.XPath.dll
 C:\c#\SchoolMaster\SchoolMaster\bin\roslyn\System.Xml.XPath.XDocument.dll
 C:\c#\SchoolMaster\SchoolMaster\bin\roslyn\vbc.exe.config
 C:\c#\SchoolMaster\SchoolMaster\bin\roslyn\vbc.rsp
+C:\c#\SchoolMaster\SchoolMaster\obj\Debug\SchoolMaster.csprojResolveAssemblyReference.cache

@@ -12,5 +12,6 @@ namespace SchoolMaster.App.Context
         public string _descricao { get; set; }
         public Double _valorCurso { get; set; }
         public Int32 _cursoID { get; set; }
+        public Int32 qtdAlunos { get; set; }
     }
 }

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/App/Layout.Master" AutoEventWireup="true" CodeBehind="cadastrarCurso.aspx.cs" Inherits="SchoolMaster.App.cadastrarCurso" %>
+﻿<%@ Page Title="Cadastrar Curso" Language="C#" MasterPageFile="~/App/Layout.Master" AutoEventWireup="true" CodeBehind="cadastrarCurso.aspx.cs" Inherits="SchoolMaster.App.cadastrarCurso" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 
 </asp:Content>

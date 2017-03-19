@@ -12,7 +12,7 @@ namespace SchoolMaster.App.Controllers
     [DataObject(true)]
     public class CursoController
     {
-
+        [DataObjectMethod(DataObjectMethodType.Select)]
         public List<CursoClass> consultarTodos()
         {
             CursoModel crs = new CursoModel();
