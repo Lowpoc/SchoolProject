@@ -15,7 +15,7 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #333;
+    background-color: #063507;
 }
 
 li {
@@ -31,7 +31,7 @@ li a, .dropbtn {
 }
 
 li a:hover, .dropdown:hover .dropbtn {
-    background-color: #45a049;
+    background-color: #808080;
 }
 
 li.dropdown {
@@ -118,6 +118,19 @@ input[type=date] {
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
+    border-radius: 20%;
+}.formatButtonCancel {
+    background-color: #ff0000;
+    border: none;
+    color: white;
+    padding: 15px 26px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 20%;
 }input[type=submit].buttonPaginacao {
     border-radius: 12px;
     background-color: #4caf50;

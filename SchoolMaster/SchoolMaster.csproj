@@ -56,6 +56,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Data.SqlXml" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
@@ -129,8 +130,12 @@
     <Compile Include="App\Context\AlunoClass.cs" />
     <Compile Include="App\Context\ConectDb.cs" />
     <Compile Include="App\Context\CursoClass.cs" />
+    <Compile Include="App\Context\DisciplinaClass.cs" />
+    <Compile Include="App\Context\ProfessorClass.cs" />
+    <Compile Include="App\Context\TurmasClass.cs" />
     <Compile Include="App\Controllers\AlunoController.cs" />
     <Compile Include="App\Controllers\CursoController.cs" />
+    <Compile Include="App\Controllers\DisciplinaController.cs" />
     <Compile Include="App\Layout.Master.cs">
       <DependentUpon>Layout.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -140,6 +145,7 @@
     </Compile>
     <Compile Include="App\Models\AlunoModel.cs" />
     <Compile Include="App\Models\CursoModel.cs" />
+    <Compile Include="App\Models\DisciplinaModel.cs" />
     <Compile Include="App\PaginaInical.aspx.cs">
       <DependentUpon>PaginaInical.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

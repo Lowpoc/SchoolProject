@@ -27,5 +27,11 @@ namespace SchoolMaster.App.Controllers
             CursoModel csr = new CursoModel();
             return csr.cadastrar(curso);
         }
+        [DataObjectMethod(DataObjectMethodType.Delete)]
+        public Boolean remover(CursoClass c)
+        {
+            CursoModel csr = new CursoModel();
+            return csr.removerCurso(c);
+        }
     }
 }

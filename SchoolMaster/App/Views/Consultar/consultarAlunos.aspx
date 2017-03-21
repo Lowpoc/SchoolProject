@@ -11,12 +11,13 @@
 </asp:Table>
 </asp:Content>
 <asp:Content  ContentPlaceHolderID="bodyForm" runat="server">
-    <asp:GridView ID="ListaDeAlunos" runat="server" DataSourceID="ObjectAluno" AutoGenerateColumns="False" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" ForeColor="Black" HorizontalAlign="Center" AllowPaging="True">
+    <asp:GridView ID="ListaDeAlunos" runat="server" DataSourceID="ObjectAluno" AutoGenerateColumns="False" BackColor="#063507" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" ForeColor="Black" HorizontalAlign="Center" AllowPaging="True">
         <Columns>
             <asp:BoundField DataField="_nome" HeaderText="Nome do Aluno" SortExpression="_nome" />
             <asp:BoundField DataField="_cpf" HeaderText="CPF" SortExpression="_cpf"></asp:BoundField>
             <asp:BoundField DataField="_datanascimento" HeaderText="Data de Nascimento" SortExpression="_datanascimento"></asp:BoundField>
             <asp:BoundField DataField="_mgp" HeaderText="Media Geral" SortExpression="_mgp"></asp:BoundField>
+            <asp:CheckBoxField />
         </Columns>
         <FooterStyle BackColor="#CCCCCC" />
         <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />

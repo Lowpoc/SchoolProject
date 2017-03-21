@@ -68,7 +68,7 @@ namespace SchoolMaster.App.Models
             catch (Exception ex)
             {
 
-                throw new Exception("Erro de sql"+ex);
+                throw new Exception("Erro de sql" + ex);
             }
             finally
             {
@@ -78,41 +78,67 @@ namespace SchoolMaster.App.Models
 
         }
 
-    public List<CursoClass> consultarTodos()
-    {
-        List<CursoClass> listacurso = new List<CursoClass>();
-        try
+        public List<CursoClass> consultarTodos()
         {
-            this.OpenConcection();
-            this.commad = new SqlCommand(
-                @"SELECT C.CursoID AS ID ,C.Descricao AS DESCRICAO,C.ValorCurso AS VALOR,
+            List<CursoClass> listacurso = new List<CursoClass>();
+            try
+            {
+                this.OpenConcection();
+                this.commad = new SqlCommand(
+                    @"SELECT C.CursoID AS ID ,C.Descricao AS DESCRICAO,C.ValorCurso AS VALOR,
                      C.Codigo AS CODIGO,
                     COUNT(A.AlunoID) AS QTD
-                    FROM CURSO C LEFT JOIN ALUNO A ON A.CursoID = C.CursoID GROUP BY C.CursoID, C.Descricao, C.ValorCurso, C.Codigo",this.connect);
-            this.reader = this.commad.ExecuteReader();
-            while (this.reader.Read())
-            {
-                CursoClass objCurso = new CursoClass();
+                    FROM CURSO C LEFT JOIN ALUNO A ON A.CursoID = C.CursoID GROUP BY C.CursoID, C.Descricao, C.ValorCurso, C.Codigo",
+                    this.connect);
+                this.reader = this.commad.ExecuteReader();
+                while (this.reader.Read())
+                {
+                    CursoClass objCurso = new CursoClass();
 
-                objCurso._codigo = this.reader["CODIGO"].ToString();
-                objCurso._descricao = this.reader["DESCRICAO"].ToString();
-                objCurso._valorCurso = Convert.ToDouble(this.reader["VALOR"]);
-                objCurso._cursoID = Convert.ToInt32(this.reader["ID"]);
-                objCurso.qtdAlunos = Convert.ToInt32(this.reader["QTD"]);
-                listacurso.Add(objCurso);
+                    objCurso._codigo = this.reader["CODIGO"].ToString();
+                    objCurso._descricao = this.reader["DESCRICAO"].ToString();
+                    objCurso._valorCurso = Convert.ToDouble(this.reader["VALOR"]);
+                    objCurso._cursoID = Convert.ToInt32(this.reader["ID"]);
+                    objCurso.qtdAlunos = Convert.ToInt32(this.reader["QTD"]);
+                    listacurso.Add(objCurso);
+                }
             }
-        }
-        catch (SqlException ex)
-        {
-            Console.WriteLine("Erro de sql" + ex);
-        }
-        finally
-        {
-            this.CloseConection();
-        }
+            catch (SqlException ex)
+            {
+                Console.WriteLine("Erro de sql" + ex);
+            }
+            finally
+            {
+                this.CloseConection();
+            }
 
 
-        return listacurso;
-    }
+            return listacurso;
+        }
+
+        public Boolean removerCurso(CursoClass c)
+        {
+            try
+            {
+                this.OpenConcection();
+                this.commad = new SqlCommand("DELETE FROM [CURSO] WHERE [CursoID] = @ID");
+                this.commad.Parameters.AddWithValue("@ID",c._cursoID);
+
+                if (this.commad.ExecuteNonQuery() > 0)
+                {
+                    return true;
+                }
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception("Erro de sql"+ex);
+            }
+            finally
+            {
+                this.CloseConection();
+            }
+            return false;
+        }
    }
 }

@@ -1,4 +1,5 @@
 ﻿<%@ Page Title="Cadastrar Curso" Language="C#" MasterPageFile="~/App/Layout.Master" AutoEventWireup="true" CodeBehind="cadastrarCurso.aspx.cs" Inherits="SchoolMaster.App.cadastrarCurso" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 
 </asp:Content>
@@ -25,8 +26,8 @@
             <asp:LinkButton runat="server" Text="Update" CommandName="Update" ID="UpdateButton" CausesValidation="True" />&nbsp;<asp:LinkButton runat="server" Text="Cancel" CommandName="Cancel" ID="UpdateCancelButton" CausesValidation="False" />
         </EditItemTemplate>
        <EditRowStyle  />
-        <FooterStyle />
-        <HeaderStyle />
+        <FooterStyle BackColor="#063507" ForeColor="white" />
+        <HeaderStyle BackColor="#063507"  ForeColor="white"/>
         <FooterTemplate>
             School Master - Cursos<br />
         </FooterTemplate>
@@ -37,7 +38,7 @@
             <asp:TextBox Text='<%# Bind("_descricao") %>' runat="server" ID="_descricaoTextBox" /><br />
             Valor do Curso:
             <asp:TextBox Text='<%# Bind("_valorCurso") %>' runat="server" ID="_valorCursoTextBox" /><br />
-            <asp:LinkButton runat="server" Text="Cadastrar" CommandName="Insert" ID="InsertButton" CausesValidation="True" CssClass="formatButton" />&nbsp;<asp:LinkButton runat="server" Text="Cancelar" CommandName="Cancel" ID="InsertCancelButton" CausesValidation="False" BorderStyle="Outset" BorderWidth="1px" CssClass="formatButton" />
+            <asp:LinkButton runat="server" Text="Cadastrar" CommandName="Insert" ID="InsertButton" CausesValidation="True" CssClass="formatButton" />&nbsp;<asp:LinkButton runat="server" Text="Cancelar" CommandName="Cancel" ID="InsertCancelButton" CausesValidation="False" BorderStyle="Outset" BorderWidth="1px" CssClass="formatButtonCancel" />
         </InsertItemTemplate>
         <HeaderTemplate>
             Novo Cadastro
