@@ -10,24 +10,33 @@
 namespace SchoolMaster.App {
     
     
-    public partial class WebForm3 {
+    public partial class Template {
         
         /// <summary>
-        /// ListaDeAlunos control.
+        /// head control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView ListaDeAlunos;
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
         
         /// <summary>
-        /// ObjectAluno control.
+        /// BlocoDoMeio control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ObjectDataSource ObjectAluno;
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder BlocoDoMeio;
+        
+        /// <summary>
+        /// bodyForm control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder bodyForm;
     }
 }

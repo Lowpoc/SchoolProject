@@ -80,7 +80,16 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App\PaginaInical.aspx" />
+    <Content Include="App\public\Content\css\components.css" />
+    <Content Include="App\public\Content\css\icons.css" />
+    <Content Include="App\public\Content\css\responsee.css" />
+    <Content Include="App\public\Content\css\template-style.css" />
     <Content Include="App\public\Imagens\Background-Site\PlanoDeFundo.jpg" />
+    <Content Include="App\public\Imagens\logoSchool.png" />
+    <Content Include="App\public\Scripts\js\jquery-1.8.3.min.js" />
+    <Content Include="App\public\Scripts\js\jquery-ui.min.js" />
+    <Content Include="App\public\Scripts\js\modernizr.js" />
+    <Content Include="App\public\Scripts\js\responsee.js" />
     <Content Include="App\Views\Cadastros\cadastrarAluno.aspx" />
     <Content Include="App\Views\Consultar\consultarAlunos.aspx" />
     <Content Include="App\Views\Cadastros\cadastrarCurso.aspx" />
@@ -88,6 +97,7 @@
     <Content Include="App\Views\Cadastros\cadastrarTurma.aspx" />
     <Content Include="App\Views\Cadastros\cadastrarProfessor.aspx" />
     <Content Include="App\Views\Consultar\consultarCurso.aspx" />
+    <Content Include="App\Views\Home\Home.aspx" />
     <Content Include="packages.config" />
     <Content Include="App\public\Scripts\jquery-1.9.1.min.map" />
     <Content Include="App\Layout.Master" />
@@ -98,6 +108,7 @@
     <Content Include="App\public\Scripts\jquery-3.1.1.slim.min.js" />
     <Content Include="App\public\Scripts\jquery-3.1.1.slim.min.map" />
     <Content Include="App\public\Scripts\jquery-3.1.1.min.map" />
+    <Content Include="App\Template.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -153,6 +164,13 @@
     <Compile Include="App\PaginaInical.aspx.designer.cs">
       <DependentUpon>PaginaInical.aspx</DependentUpon>
     </Compile>
+    <Compile Include="App\Template.Master.cs">
+      <DependentUpon>Template.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App\Template.Master.designer.cs">
+      <DependentUpon>Template.Master</DependentUpon>
+    </Compile>
     <Compile Include="App\Views\Cadastros\cadastrarAluno.aspx.cs">
       <DependentUpon>cadastrarAluno.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -201,6 +219,13 @@
     </Compile>
     <Compile Include="App\Views\Consultar\consultarCurso.aspx.designer.cs">
       <DependentUpon>consultarCurso.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App\Views\Home\Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App\Views\Home\Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

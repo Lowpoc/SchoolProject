@@ -1,0 +1,80 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Template.master.cs" Inherits="SchoolMaster.App.Template" %>
+
+<!DOCTYPE html>
+
+<html lang="pt-br">
+<head runat="server">
+    <title>School Master</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="stylesheet" href="~/App/public/Content/css/components.css">
+      <link rel="stylesheet" href="~/App/public/Content/css/icons.css">
+      <link rel="stylesheet" href="~/App/public/Content/css/responsee.css">
+      <link rel="stylesheet" href="~/App/public/Content/css/template-style.css">
+      <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+      <script type="text/javascript" src="/App/public/Scripts/js/jquery-1.8.3.min.js"></script>
+      <script type="text/javascript" src="/App/public/Scripts/js/jquery-ui.min.js"></script>    
+      <script type="text/javascript" src="/App/public/Scripts/js/responsee.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+    <body class="size-1140">
+      <div id="all-content" class="with-sticky-footer">
+         <!-- TOP NAV WITH LOGO -->
+         <header>
+            <nav>
+               <div class="line">
+                  <div class="s-12 l-2">
+                     <img class="s-10 l-5 center"src="/App/public/Imagens/logoSchool.png">
+                  </div>
+                  <div class="top-nav s-12 l-10 right">
+                     <p class="nav-text">Menu</p>
+                     <ul class="right">
+                        <li><a href="../Home/Home.aspx">Home</a></li>
+                        <li>
+                           <a>Aluno</a>
+                           <ul>
+                              <li><a href="../Cadastros/cadastrarAluno.aspx">Cadastrar</a></li>
+                              <li><a href="../Consultar/consultarAlunos.aspx">Área de Relatorio</a></li>
+                           </ul>
+                        </li>
+                        <li>
+                           <a>Company</a>
+                           <ul>
+                              <li><a>About</a></li>
+                              <li><a>Location</a></li>
+                           </ul>
+                        </li>
+                        <li><a>Contact</a></li>
+                     </ul>
+                  </div>
+               </div>
+            </nav>  
+         </header>
+         <asp:ContentPlaceHolder ID="BlocoDoMeio" runat="server">
+        
+        </asp:ContentPlaceHolder>
+         
+         <!-- FOOTER -->
+         <div id="footer-content" class="sticky-footer">
+            <footer>
+               <div class="line">
+                  <div class="s-12 l-6">
+                     <p>Copyright 2017,By -School Master </p>
+                  </div>
+                  <div class="s-12 l-6">
+                     <a class="right" href="https://www.linkedin.com/in/marcus-vinicius-santana-0a1602117/" title="Desenvolvedor Web - Marcus Vinicius">Developer - MVSS</a>
+                  </div>
+               </div>
+            </footer>
+         </div>
+      </div>
+<%--    <form id="form1" runat="server">--%>
+<%--    <div>--%>
+        <asp:ContentPlaceHolder ID="bodyForm" runat="server">
+        
+        </asp:ContentPlaceHolder>
+<%--    </div>--%>
+<%--    </form>--%>
+</body>
+</html>
