@@ -85,14 +85,16 @@ namespace SchoolMaster.App.Models
             }
             catch (Exception)
             {
-                
+
                 throw new Exception("Erro ao executar delete Aluno");
                 this.CloseConection();
-            }     
+            }
             this.CloseConection();
             return 1;
         }
+
         #region ConsultaFiltros
+
         public List<AlunoClass> consultarFiltros(string nome, Int32 alunoid, DateTime _datanascimento)
         {
             List<AlunoClass> lista = new List<AlunoClass>();
@@ -110,7 +112,7 @@ namespace SchoolMaster.App.Models
                 }
                 else
                 {
-                    this.commad.Parameters.AddWithValue("@nome", "%"+nome+"%");
+                    this.commad.Parameters.AddWithValue("@nome", "%" + nome + "%");
                 }
 
                 if (alunoid > 0)
@@ -128,7 +130,7 @@ namespace SchoolMaster.App.Models
                 }
                 else
                 {
-                    this.commad.Parameters.AddWithValue("@_datanascimento",_datanascimento);
+                    this.commad.Parameters.AddWithValue("@_datanascimento", _datanascimento);
                 }
 
                 this.reader = this.commad.ExecuteReader();
@@ -158,6 +160,37 @@ namespace SchoolMaster.App.Models
             }
             return lista;
         }
+
+        #endregion
+
+        #region UpdateModel
+
+        public void update(AlunoClass aluno)
+        {
+            try
+            {
+                this.OpenConcection();
+                this.commad =
+                    new SqlCommand(@"Update ALUNO set Nome = @nome , CPF = @cpf , Datanascimento = @datanascimento, MGP = @mgp 
+                                            WHERE AlunoID = @id", this.connect);
+                this.commad.Parameters.AddWithValue("@nome", aluno._nome);
+                this.commad.Parameters.AddWithValue("@cpf", aluno._cpf);
+                this.commad.Parameters.AddWithValue("@datanscimento", aluno._datanascimento);
+                this.commad.Parameters.AddWithValue("@mgp", aluno._mgp);
+                this.commad.Parameters.AddWithValue("@id", aluno.alunoid);
+                this.commad.ExecuteNonQuery();
+            }
+            catch (Exception)
+            {
+
+                throw new Exception("Erro no update aluno");
+            }
+            finally
+            {
+                this.CloseConection();
+            }
+        }
+
         #endregion
     }
 }

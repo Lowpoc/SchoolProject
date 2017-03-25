@@ -45,5 +45,19 @@ namespace SchoolMaster.App.Controllers
             return lista;
         }
         #endregion
+
+        #region UpdateMetodos
+
+        [DataObjectMethod(DataObjectMethodType.Update)]
+
+        public void AtualizarAluno(string _nome, string _cpf,DateTime _datanascimento ,float _mgp,Int32 alunoid)
+        {
+            AlunoClass objAlu = new AlunoClass(_nome,_cpf,_datanascimento,_mgp);
+            objAlu.alunoid = alunoid;
+            AlunoModel modelo = new AlunoModel();
+            modelo.update(objAlu);
+        }
+
+        #endregion
     }
 }

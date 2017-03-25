@@ -32,15 +32,15 @@
                 <legend>Consulta Avançada</legend>
                <div class="s-2 l-6">
                <asp:Label ID="LbAluno" runat="server" Text="Nome do Aluno" CssClass="customform"   Font-Size="Large"></asp:Label> <em style="color: red">*</em>
-               <asp:TextBox ID="FiltroNome" runat="server"></asp:TextBox>
+               <asp:TextBox ID="FiltroNome" runat="server" AutoPostBack="True"></asp:TextBox>
                </div>
                <div class="s-2 l-4">
                <asp:Label ID="LbMatricula" runat="server" Text="Matricula" CssClass="customform"    Font-Size="Large"></asp:Label> <em style="color: red">*</em>
-               <asp:TextBox ID="FiltroMatricula" runat="server" TextMode="Number"></asp:TextBox>
+               <asp:TextBox ID="FiltroMatricula" runat="server" TextMode="Number" AutoPostBack="True"></asp:TextBox>
                 </div>
                 <div class="s-5 l-6">
                 <asp:Label ID="LbData" runat="server" Text="Data Nascimento" CssClass="customform"   Font-Size="Large"></asp:Label> <em style="color: red">*</em>
-               <asp:TextBox ID="FiltroData" runat="server" TextMode="Date"></asp:TextBox>
+               <asp:TextBox ID="FiltroData" runat="server" TextMode="Date" AutoPostBack="True"></asp:TextBox>
                 </div>
              <asp:Button ID="SubmitFiltro" runat="server" Text="Filtrar" CssClass=" button btn-cadastrar" />
          </fieldset>
@@ -50,9 +50,9 @@
             <asp:BoundField DataField="_nome" HeaderText="Nome" SortExpression="_nome"></asp:BoundField>
 
             <asp:BoundField DataField="_cpf" HeaderText="Cpf" SortExpression="_cpf" />
-            <asp:BoundField DataField="_datanascimento" HeaderText="Data Nascimento" SortExpression="_datanascimento"></asp:BoundField>
+            <asp:BoundField DataField="_datanascimento" HeaderText="Data Nascimento" SortExpression="_datanascimento" DataFormatString="&quot;{0:dd/MM/yyyy}&quot;"></asp:BoundField>
             <asp:BoundField DataField="_mgp" HeaderText="Media" SortExpression="_mgp"></asp:BoundField>
-            <asp:CommandField ShowDeleteButton="True" HeaderText="Funcao" ButtonType="Image" DeleteImageUrl="~/App/public/Imagens/remove.png"></asp:CommandField>
+            <asp:CommandField ShowDeleteButton="True" HeaderText="Funcao" ButtonType="Image" DeleteImageUrl="~/App/public/Imagens/remove.png" EditImageUrl="~/App/public/Imagens/edit.png" ShowEditButton="True"></asp:CommandField>
         </Columns>
         <FooterStyle BackColor="#152732" />
         <HeaderStyle BackColor="#152732" Font-Bold="True" ForeColor="White" />
@@ -63,10 +63,10 @@
         <SortedAscendingHeaderStyle BackColor="#808080" />
         <SortedDescendingCellStyle BackColor="#CAC9C9" />
         <SortedDescendingHeaderStyle BackColor="#383838" />
-    </asp:GridView>
+    </asp:GridView> 
 </div>
     </form>
-    <asp:ObjectDataSource ID="ObjectAluno" runat="server" SelectMethod="consultsarFiltros" TypeName="SchoolMaster.App.Controllers.AlunoController" DeleteMethod="DeleteAluno" OldValuesParameterFormatString="original_{0}">
+    <asp:ObjectDataSource ID="ObjectAluno" runat="server" SelectMethod="consultsarFiltros" TypeName="SchoolMaster.App.Controllers.AlunoController" DeleteMethod="DeleteAluno"  UpdateMethod="AtualizarAluno">
         <DeleteParameters>
             <asp:Parameter Name="alunoId" Type="Int32" />
         </DeleteParameters>
@@ -75,5 +75,12 @@
             <asp:ControlParameter ControlID="FiltroMatricula" PropertyName="Text" Name="alunoid" Type="Int32"></asp:ControlParameter>
             <asp:ControlParameter ControlID="FiltroData" PropertyName="Text" Name="_datanascimento" Type="DateTime"></asp:ControlParameter>
         </SelectParameters>
+        <UpdateParameters>
+            <asp:Parameter Name="_nome" Type="String"></asp:Parameter>
+            <asp:Parameter Name="_cpf" Type="String"></asp:Parameter>
+            <asp:Parameter Name="_datanascimento" Type="DateTime"></asp:Parameter>
+            <asp:Parameter Name="_mgp" Type="Single"></asp:Parameter>
+            <asp:Parameter Name="alunoid" Type="Int32"></asp:Parameter>
+        </UpdateParameters>
     </asp:ObjectDataSource>
 </asp:Content>

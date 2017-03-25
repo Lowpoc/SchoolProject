@@ -85,6 +85,7 @@
     <Content Include="App\public\Content\css\responsee.css" />
     <Content Include="App\public\Content\css\template-style.css" />
     <Content Include="App\public\Imagens\Background-Site\PlanoDeFundo.jpg" />
+    <Content Include="App\public\Imagens\edit.png" />
     <Content Include="App\public\Imagens\logoSchool.png" />
     <Content Include="App\public\Imagens\remove.png" />
     <Content Include="App\public\Imagens\selected.png" />
