@@ -92,5 +92,72 @@ namespace SchoolMaster.App.Models
             this.CloseConection();
             return 1;
         }
+        #region ConsultaFiltros
+        public List<AlunoClass> consultarFiltros(string nome, Int32 alunoid, DateTime _datanascimento)
+        {
+            List<AlunoClass> lista = new List<AlunoClass>();
+            try
+            {
+                this.OpenConcection();
+                string sql = @"SELECT * FROM ALUNO WHERE
+                               (@nome IS NULL  or nome LIKE @nome) AND (@alunoid is NULL or AlunoID = @alunoid ) AND
+                               (@_datanascimento is NULL or Datanascimento = @_datanascimento)";
+                this.commad = new SqlCommand(sql, this.connect);
+
+                if (string.IsNullOrEmpty(nome))
+                {
+                    this.commad.Parameters.AddWithValue("@nome", DBNull.Value);
+                }
+                else
+                {
+                    this.commad.Parameters.AddWithValue("@nome", "%"+nome+"%");
+                }
+
+                if (alunoid > 0)
+                {
+                    this.commad.Parameters.AddWithValue("@alunoid", alunoid);
+                }
+                else
+                {
+                    this.commad.Parameters.AddWithValue("@alunoid", DBNull.Value);
+                }
+
+                if (_datanascimento.Equals(DateTime.MinValue))
+                {
+                    this.commad.Parameters.AddWithValue("@_datanascimento", DBNull.Value);
+                }
+                else
+                {
+                    this.commad.Parameters.AddWithValue("@_datanascimento",_datanascimento);
+                }
+
+                this.reader = this.commad.ExecuteReader();
+                if (this.reader.HasRows)
+                {
+                    while (this.reader.Read())
+                    {
+                        AlunoClass objAlu = new AlunoClass(
+                            this.reader["Nome"].ToString(),
+                            Convert.ToUInt64(this.reader["CPF"]).ToString(@"000\.000\.000\-00"),
+                            Convert.ToDateTime(this.reader["DataNascimento"].ToString()),
+                            float.Parse(this.reader["MGP"].ToString())
+                        );
+                        objAlu.alunoid = Convert.ToInt32(this.reader["AlunoiD"]);
+                        lista.Add(objAlu);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception("Erro de Sql" + ex);
+            }
+            finally
+            {
+                this.CloseConection();
+            }
+            return lista;
+        }
+        #endregion
     }
 }

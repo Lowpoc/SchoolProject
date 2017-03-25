@@ -35,5 +35,15 @@ namespace SchoolMaster.App.Controllers
             modelo.deletarAluno(alunoId);
         }
 
+        #region ConsultaFiltros
+        [DataObjectMethod(DataObjectMethodType.Select)]
+        public List<AlunoClass> consultsarFiltros(string nome ,Int32 alunoid , DateTime _datanascimento)
+        {
+            List<AlunoClass> lista = new List<AlunoClass>();
+            AlunoModel modelo = new AlunoModel();
+            lista = modelo.consultarFiltros(nome,alunoid,_datanascimento);
+            return lista;
+        }
+        #endregion
     }
 }

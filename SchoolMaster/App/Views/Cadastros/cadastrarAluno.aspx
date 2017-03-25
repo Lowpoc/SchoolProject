@@ -11,12 +11,12 @@
         <legend>Matricular Aluno</legend>
       <asp:Label ID="LbAluno" runat="server" Text="Nome do Aluno" CssClass="customform"   Font-Size="Large"></asp:Label> <em style="color: red">*</em>
             <asp:TextBox ID="aluno_nome" runat="server" CssClass="input-sm" ></asp:TextBox>
-        <asp:Label ID="LbCPF" runat="server" Text="CPF "  Font-Size="Larger" ></asp:Label> <em style="color: red">*</em>
+        <asp:Label ID="LbCPF" runat="server" Text="CPF "  Font-Size="Larger" TextMode="text"></asp:Label> <em style="color: red">*</em>
             <asp:TextBox ID="aluno_cpf" runat="server" CssClass="input-sm"></asp:TextBox>
-        <asp:Label ID="LbNascimento" runat="server" Text="Data de Nascimento  " Font-Size="Larger"  ></asp:Label><em style="color: red">*</em>
+        <asp:Label ID="LbNascimento" runat="server" Text="Data de Nascimento  " Font-Size="Larger"></asp:Label><em style="color: red">*</em>
             <asp:TextBox ID="aluno_datanascimento" runat="server"   TextMode="Date"></asp:TextBox>
         <asp:Label ID="LbMGP" runat="server" Text="MGP" Font-Size="Larger"  ></asp:Label><em style="color: red">*</em>
-            <asp:TextBox ID="aluno_mgp" runat="server"  ></asp:TextBox>
+            <asp:TextBox ID="aluno_mgp" runat="server"  TextMode="number"></asp:TextBox>
         <asp:Label ID="LbCurso" runat="server" Text="Cursos" Font-Size="Larger" ForeColor="White" ></asp:Label><em style="color: red">*</em>
             <asp:DropDownList ID="listaCursos" DataTextField="_descricao" DataValueField="_cursoID" runat="server"></asp:DropDownList>
         <div class="s-4 l-2 left ">

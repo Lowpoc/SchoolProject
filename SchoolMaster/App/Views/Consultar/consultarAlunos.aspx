@@ -28,7 +28,23 @@
          </section>
     <form runat="server">
      <div class="s-10 l-6 center">
-         <asp:GridView ID="ListaDeAlunos" runat="server" DataSourceID="ObjectAluno" AutoGenerateColumns="False" BackColor="#063507" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" ForeColor="#152732" HorizontalAlign="Center" DataKeyNames="alunoid" AllowPaging="True">
+         <fieldset class="s-10 l-10 center ">
+                <legend>Consulta Avançada</legend>
+               <div class="s-2 l-6">
+               <asp:Label ID="LbAluno" runat="server" Text="Nome do Aluno" CssClass="customform"   Font-Size="Large"></asp:Label> <em style="color: red">*</em>
+               <asp:TextBox ID="FiltroNome" runat="server"></asp:TextBox>
+               </div>
+               <div class="s-2 l-4">
+               <asp:Label ID="LbMatricula" runat="server" Text="Matricula" CssClass="customform"    Font-Size="Large"></asp:Label> <em style="color: red">*</em>
+               <asp:TextBox ID="FiltroMatricula" runat="server" TextMode="Number"></asp:TextBox>
+                </div>
+                <div class="s-5 l-6">
+                <asp:Label ID="LbData" runat="server" Text="Data Nascimento" CssClass="customform"   Font-Size="Large"></asp:Label> <em style="color: red">*</em>
+               <asp:TextBox ID="FiltroData" runat="server" TextMode="Date"></asp:TextBox>
+                </div>
+             <asp:Button ID="SubmitFiltro" runat="server" Text="Filtrar" CssClass=" button btn-cadastrar" />
+         </fieldset>
+         <asp:GridView ID="ListaDeAlunos" runat="server" EmptyDataText="Sem Dados"  DataSourceID="ObjectAluno" AutoGenerateColumns="False" BackColor="#063507" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" ForeColor="#152732" HorizontalAlign="Center" DataKeyNames="alunoid" AllowPaging="True">
         <Columns>
             <asp:BoundField DataField="alunoid" HeaderText="Matricula" SortExpression="alunoid"></asp:BoundField>
             <asp:BoundField DataField="_nome" HeaderText="Nome" SortExpression="_nome"></asp:BoundField>
@@ -50,9 +66,14 @@
     </asp:GridView>
 </div>
     </form>
-    <asp:ObjectDataSource ID="ObjectAluno" runat="server"  SelectMethod="consultsarTodos" TypeName="SchoolMaster.App.Controllers.AlunoController" DeleteMethod="DeleteAluno">
+    <asp:ObjectDataSource ID="ObjectAluno" runat="server" SelectMethod="consultsarFiltros" TypeName="SchoolMaster.App.Controllers.AlunoController" DeleteMethod="DeleteAluno" OldValuesParameterFormatString="original_{0}">
         <DeleteParameters>
             <asp:Parameter Name="alunoId" Type="Int32" />
         </DeleteParameters>
+        <SelectParameters>
+            <asp:ControlParameter ControlID="FiltroNome" PropertyName="Text" Name="nome" Type="String"></asp:ControlParameter>
+            <asp:ControlParameter ControlID="FiltroMatricula" PropertyName="Text" Name="alunoid" Type="Int32"></asp:ControlParameter>
+            <asp:ControlParameter ControlID="FiltroData" PropertyName="Text" Name="_datanascimento" Type="DateTime"></asp:ControlParameter>
+        </SelectParameters>
     </asp:ObjectDataSource>
 </asp:Content>
