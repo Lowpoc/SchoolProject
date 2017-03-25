@@ -53,10 +53,11 @@ namespace SchoolMaster.App.Models
                     {
                         AlunoClass objAlu = new AlunoClass(
                             this.reader["Nome"].ToString(),
-                            this.reader["CPF"].ToString(),
+                            Convert.ToUInt64(this.reader["CPF"]).ToString(@"000\.000\.000\-00"),
                             Convert.ToDateTime(this.reader["DataNascimento"].ToString()),
                             float.Parse(this.reader["MGP"].ToString())
                         );
+                        objAlu.alunoid = Convert.ToInt32(this.reader["AlunoiD"]);
                         lista.Add(objAlu);
                     }
                 }
@@ -71,6 +72,25 @@ namespace SchoolMaster.App.Models
                 this.CloseConection();
             }
             return lista;
+        }
+
+        public int deletarAluno(Int32 alunoID)
+        {
+            try
+            {
+                this.OpenConcection();
+                this.commad = new SqlCommand("DELETE FROM [ALUNO] WHERE AlunoID = @ID", this.connect);
+                this.commad.Parameters.AddWithValue("@ID", alunoID);
+                this.commad.ExecuteNonQuery();
+            }
+            catch (Exception)
+            {
+                
+                throw new Exception("Erro ao executar delete Aluno");
+                this.CloseConection();
+            }     
+            this.CloseConection();
+            return 1;
         }
     }
 }

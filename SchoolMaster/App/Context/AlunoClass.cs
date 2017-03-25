@@ -14,6 +14,7 @@ namespace SchoolMaster.App.Context
         public string _cpf { get; set; }
         public DateTime _datanascimento { get; set; }
         public float _mgp { get; set; }
+        public Int32 alunoid { get; set; }
 
         public AlunoClass(string nome,string cpf ,DateTime data,float mgp )
         {

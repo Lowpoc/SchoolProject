@@ -86,6 +86,8 @@
     <Content Include="App\public\Content\css\template-style.css" />
     <Content Include="App\public\Imagens\Background-Site\PlanoDeFundo.jpg" />
     <Content Include="App\public\Imagens\logoSchool.png" />
+    <Content Include="App\public\Imagens\remove.png" />
+    <Content Include="App\public\Imagens\selected.png" />
     <Content Include="App\public\Scripts\js\jquery-1.8.3.min.js" />
     <Content Include="App\public\Scripts\js\jquery-ui.min.js" />
     <Content Include="App\public\Scripts\js\modernizr.js" />

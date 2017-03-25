@@ -39,10 +39,10 @@
                            </ul>
                         </li>
                         <li>
-                           <a>Company</a>
+                           <a>Curso</a>
                            <ul>
-                              <li><a>About</a></li>
-                              <li><a>Location</a></li>
+                              <li><a  href="../Cadastros/cadastrarCurso.aspx">Cadastrar</a></li>
+                              <li><a href="../Consultar/consultarCurso.aspx">Área de Relatorio</a></li>
                            </ul>
                         </li>
                         <li><a>Contact</a></li>

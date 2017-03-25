@@ -28,6 +28,12 @@ namespace SchoolMaster.App.Controllers
             lista = modelo.consultarTodos();
             return lista;
         }
+        [DataObjectMethod(DataObjectMethodType.Delete)]
+        public void DeleteAluno(Int32 alunoId)
+        {
+            AlunoModel modelo = new AlunoModel();
+            modelo.deletarAluno(alunoId);
+        }
 
     }
 }

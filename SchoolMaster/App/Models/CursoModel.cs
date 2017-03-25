@@ -116,13 +116,13 @@ namespace SchoolMaster.App.Models
             return listacurso;
         }
 
-        public Boolean removerCurso(CursoClass c)
+        public Boolean removerCurso(Int32 _cursoID)
         {
             try
             {
                 this.OpenConcection();
-                this.commad = new SqlCommand("DELETE FROM [CURSO] WHERE [CursoID] = @ID");
-                this.commad.Parameters.AddWithValue("@ID",c._cursoID);
+                this.commad = new SqlCommand("DELETE FROM [CURSO] WHERE [CursoID]=@ID",this.connect);
+                this.commad.Parameters.AddWithValue("@ID",_cursoID);
 
                 if (this.commad.ExecuteNonQuery() > 0)
                 {

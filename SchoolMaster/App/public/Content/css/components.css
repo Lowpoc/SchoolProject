@@ -60,43 +60,6 @@ form.customform input, form.customform textarea, form.customform select {
  -moz-transition: background 0.20s linear 0s;
  -webkit-transition: background 0.20s linear 0s;
 }
-form.customform .btn-cadastrar {
-background: none repeat scroll 0 0 #152732;
- transition: background 0.20s linear 0s;
- -o-transition: background 0.20s linear 0s;
- -ms-transition: background 0.20s linear 0s;
- -moz-transition: background 0.20s linear 0s;
- -webkit-transition: background 0.20s linear 0s;
-  color: white;
-}
-
-form.customform .btn-cadastrar:hover {
-    background: none repeat scroll 0 0 #008000;
- border: 1px solid #E0E0E0;
- padding: 0.625rem;
- width: 100%;
- color: white;
-}
-form.customform .btn-cancelar {
- background: none repeat scroll 0 0 #dc003a;
- transition: background 0.20s linear 0s;
- -o-transition: background 0.20s linear 0s;
- -ms-transition: background 0.20s linear 0s;
- -moz-transition: background 0.20s linear 0s;
- -webkit-transition: background 0.20s linear 0s;
-  color: white;
-}
-
-form.customform .btn-cancelar:hover {
- background: none repeat scroll 0 0 #ff0000;
- transition: background 0.20s linear 0s;
- -o-transition: background 0.20s linear 0s;
- -ms-transition: background 0.20s linear 0s;
- -moz-transition: background 0.20s linear 0s;
- -webkit-transition: background 0.20s linear 0s;
-  color: white;
-}
-
 form.customform input:hover, form.customform textarea:hover, form.customform select:hover, form.customform input:focus, form.customform textarea:focus, form.customform select:focus {background: none repeat scroll 0 0 #fff;}
 form.customform input, form.customform textarea, form.customform select {
  background: none repeat scroll 0 0 #F5F5F5;
@@ -138,7 +101,7 @@ form.customform button {
 /* Tooltip */
 a.tooltip-container,.tooltip-container {
   border-bottom:1px dotted;
-  border-bottom-color: color;
+  border-bottom-color:#444444;
   cursor: help;
   font-weight: 600;
 }
@@ -236,4 +199,24 @@ a.tooltip-content.tooltip-bottom,.tooltip-content.tooltip-bottom {
 }
 .button:hover > i {
   background: rgba(0, 0, 0, 0.06) none repeat scroll 0 0;
+}
+
+form.customform .btn-cancelar {
+ background: none repeat scroll 0 0 #dc003a;
+ transition: background 0.20s linear 0s;
+ -o-transition: background 0.20s linear 0s;
+ -ms-transition: background 0.20s linear 0s;
+ -moz-transition: background 0.20s linear 0s;
+ -webkit-transition: background 0.20s linear 0s;
+  color: white;
+}
+
+form.customform .btn-cancelar:hover {
+ background: none repeat scroll 0 0 #ff0000;
+ transition: background 0.20s linear 0s;
+ -o-transition: background 0.20s linear 0s;
+ -ms-transition: background 0.20s linear 0s;
+ -moz-transition: background 0.20s linear 0s;
+ -webkit-transition: background 0.20s linear 0s;
+  color: white;
 }
