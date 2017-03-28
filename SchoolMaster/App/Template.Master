@@ -45,6 +45,12 @@
                               <li><a href="../Consultar/consultarCurso.aspx">Área de Relatorio</a></li>
                            </ul>
                         </li>
+                         <li>
+                           <a>Fabrica</a>
+                           <ul>
+                              <li><a href="../Consultar/consultarFabrica.aspx">Área de Fabrica</a></li>
+                           </ul>
+                        </li>
                         <li><a>Contact</a></li>
                      </ul>
                   </div>

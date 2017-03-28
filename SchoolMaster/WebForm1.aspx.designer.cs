@@ -7,99 +7,72 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SchoolMaster.App {
+namespace SchoolMaster {
     
     
-    public partial class WebForm3 {
+    public partial class WebForm1 {
         
         /// <summary>
-        /// SqlDataSource1 control.
+        /// form1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
+        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// LbAluno control.
+        /// TextNome control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LbAluno;
+        protected global::System.Web.UI.WebControls.TextBox TextNome;
         
         /// <summary>
-        /// FiltroNome control.
+        /// TextMatricula control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox FiltroNome;
+        protected global::System.Web.UI.WebControls.TextBox TextMatricula;
         
         /// <summary>
-        /// LbMatricula control.
+        /// TextData control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LbMatricula;
+        protected global::System.Web.UI.WebControls.TextBox TextData;
         
         /// <summary>
-        /// FiltroMatricula control.
+        /// ButtonSubmit control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox FiltroMatricula;
+        protected global::System.Web.UI.WebControls.Button ButtonSubmit;
         
         /// <summary>
-        /// LbData control.
+        /// GridView1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LbData;
+        protected global::System.Web.UI.WebControls.GridView GridView1;
         
         /// <summary>
-        /// FiltroData control.
+        /// teste control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox FiltroData;
-        
-        /// <summary>
-        /// SubmitFiltro control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button SubmitFiltro;
-        
-        /// <summary>
-        /// ListaDeAlunos control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView ListaDeAlunos;
-        
-        /// <summary>
-        /// ObjectAluno control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ObjectDataSource ObjectAluno;
+        protected global::System.Web.UI.WebControls.ObjectDataSource teste;
     }
 }

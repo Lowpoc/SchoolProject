@@ -171,19 +171,20 @@ namespace SchoolMaster.App.Models
             {
                 this.OpenConcection();
                 this.commad =
-                    new SqlCommand(@"Update ALUNO set Nome = @nome , CPF = @cpf , Datanascimento = @datanascimento, MGP = @mgp 
-                                            WHERE AlunoID = @id", this.connect);
+                    new SqlCommand(@"UPDATE [ALUNO] SET [Nome] = @nome , [CPF] = @cpf,
+                                            [DataNascimento] = @datanascimento , [MGP] = @mgp 
+                                            WHERE [AlunoID] = @id ", this.connect);
                 this.commad.Parameters.AddWithValue("@nome", aluno._nome);
-                this.commad.Parameters.AddWithValue("@cpf", aluno._cpf);
-                this.commad.Parameters.AddWithValue("@datanscimento", aluno._datanascimento);
+                this.commad.Parameters.AddWithValue("@cpf",aluno._cpf);
+                this.commad.Parameters.AddWithValue("@datanascimento", aluno._datanascimento);
                 this.commad.Parameters.AddWithValue("@mgp", aluno._mgp);
                 this.commad.Parameters.AddWithValue("@id", aluno.alunoid);
                 this.commad.ExecuteNonQuery();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
-                throw new Exception("Erro no update aluno");
+                throw new Exception("Erro no update aluno" + ex);
             }
             finally
             {

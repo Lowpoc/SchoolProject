@@ -101,9 +101,11 @@
     <Content Include="App\Views\Cadastros\cadastrarProfessor.aspx" />
     <Content Include="App\Views\Consultar\consultarCurso.aspx" />
     <Content Include="App\Views\Home\Home.aspx" />
+    <Content Include="App\Views\Consultar\consultarFabrica.aspx" />
     <Content Include="packages.config" />
     <Content Include="App\public\Scripts\jquery-1.9.1.min.map" />
     <Content Include="App\Layout.Master" />
+    <Content Include="WebForm1.aspx" />
     <None Include="App\public\Scripts\jquery-3.1.1.intellisense.js" />
     <Content Include="App\public\Scripts\jquery-3.1.1.js" />
     <Content Include="App\public\Scripts\jquery-3.1.1.min.js" />
@@ -145,11 +147,15 @@
     <Compile Include="App\Context\ConectDb.cs" />
     <Compile Include="App\Context\CursoClass.cs" />
     <Compile Include="App\Context\DisciplinaClass.cs" />
+    <Compile Include="App\Context\FabricaClass.cs" />
+    <Compile Include="App\Context\Funcoes.cs" />
+    <Compile Include="App\Context\ProdutoClass.cs" />
     <Compile Include="App\Context\ProfessorClass.cs" />
     <Compile Include="App\Context\TurmasClass.cs" />
     <Compile Include="App\Controllers\AlunoController.cs" />
     <Compile Include="App\Controllers\CursoController.cs" />
     <Compile Include="App\Controllers\DisciplinaController.cs" />
+    <Compile Include="App\Controllers\FabricaController.cs" />
     <Compile Include="App\Layout.Master.cs">
       <DependentUpon>Layout.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -160,6 +166,7 @@
     <Compile Include="App\Models\AlunoModel.cs" />
     <Compile Include="App\Models\CursoModel.cs" />
     <Compile Include="App\Models\DisciplinaModel.cs" />
+    <Compile Include="App\Models\FabricaModel.cs" />
     <Compile Include="App\PaginaInical.aspx.cs">
       <DependentUpon>PaginaInical.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -230,7 +237,21 @@
     <Compile Include="App\Views\Home\Home.aspx.designer.cs">
       <DependentUpon>Home.aspx</DependentUpon>
     </Compile>
+    <Compile Include="App\Views\Consultar\consultarFabrica.aspx.cs">
+      <DependentUpon>consultarFabrica.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App\Views\Consultar\consultarFabrica.aspx.designer.cs">
+      <DependentUpon>consultarFabrica.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup />
   <PropertyGroup>

@@ -11,6 +11,7 @@
 <%--</asp:Table>--%>
 <%--</asp:Content>--%>
 <asp:Content  ContentPlaceHolderID="BlocoDoMeio" runat="server">
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString='<%$ ConnectionStrings:School-TesteConnectionString %>' SelectCommand="SELECT * FROM [Aluno]"></asp:SqlDataSource>
     <section>   
          <div id="first-block center">
                <div class="line center">
@@ -50,7 +51,7 @@
             <asp:BoundField DataField="_nome" HeaderText="Nome" SortExpression="_nome"></asp:BoundField>
 
             <asp:BoundField DataField="_cpf" HeaderText="Cpf" SortExpression="_cpf" />
-            <asp:BoundField DataField="_datanascimento" HeaderText="Data Nascimento" SortExpression="_datanascimento" DataFormatString="&quot;{0:dd/MM/yyyy}&quot;"></asp:BoundField>
+            <asp:BoundField DataField="_datanascimento" HeaderText="Data Nascimento" SortExpression="_datanascimento" DataFormatString="{0:dd/MM/yyyy}"></asp:BoundField>
             <asp:BoundField DataField="_mgp" HeaderText="Media" SortExpression="_mgp"></asp:BoundField>
             <asp:CommandField ShowDeleteButton="True" HeaderText="Funcao" ButtonType="Image" DeleteImageUrl="~/App/public/Imagens/remove.png" EditImageUrl="~/App/public/Imagens/edit.png" ShowEditButton="True"></asp:CommandField>
         </Columns>

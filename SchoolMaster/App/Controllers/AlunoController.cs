@@ -52,6 +52,8 @@ namespace SchoolMaster.App.Controllers
 
         public void AtualizarAluno(string _nome, string _cpf,DateTime _datanascimento ,float _mgp,Int32 alunoid)
         {
+            _cpf = _cpf.Replace("-", "");
+            _cpf = _cpf.Replace(".", "");
             AlunoClass objAlu = new AlunoClass(_nome,_cpf,_datanascimento,_mgp);
             objAlu.alunoid = alunoid;
             AlunoModel modelo = new AlunoModel();
